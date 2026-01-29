@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mandal Digital Credit</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#e3f2fd,#bbdefb);
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.container{
+  width:90%;
+  max-width:420px;
+  background:#fff;
+  padding:32px 22px;
+  border-radius:24px;
+  text-align:center;
+  box-shadow:0 12px 30px rgba(0,0,0,.15);
+}
+
+.profile-img{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  border:4px solid #2196f3;
+  object-fit:cover;
+  margin-bottom:12px;
+}
+
+h1{font-size:24px;font-weight:600}
+p{font-size:14px;color:#555;margin-bottom:22px}
+
+.main-btn{
+  width:100%;
+  padding:15px;
+  margin:10px 0;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(90deg,#2196f3,#42a5f5);
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+  text-decoration:none;
+  display:block;
+}
+
+.main-btn:hover{opacity:.9}
+
+.section{display:none;margin-top:8px}
+
+.sub-btn{
+  width:100%;
+  padding:14px;
+  margin-top:8px;
+  border:none;
+  border-radius:12px;
+  background:#f5f9ff;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.sub-content{
+  display:none;
+  margin-top:6px;
+  padding:12px;
+  border-radius:10px;
+  background:#e3f2fd;
+  font-size:14px;
+}
+
+.sub-content a{
+  color:#0d47a1;
+  font-weight:600;
+  text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<img src="logo.png" class="profile-img">
+<h1>Mandal Digital Credit</h1>
+<p>Санхүүгийн найдвартай шийдэл</p>
+
+<!-- ЗЭЭЛИЙН БҮТЭЭГДЭХҮҮН -->
+<button class="main-btn" onclick="toggle('loans')">💼 Зээлийн бүтээгдэхүүн</button>
+<div id="loans" class="section">
+
+  <button class="sub-btn" onclick="toggle('l1')">🏠 Ногоон зээл</button>
+  <div id="l1" class="sub-content">
+    💰 500 сая ₮ хүртэл<br>📈 2.5–3.0%<br>⏳ 1–72 сар<br>🏦 Toyota, Lexus
+  </div>
+
+  <button class="sub-btn" onclick="toggle('l2')">🚗 Автомашин худалдан авах зээл</button>
+  <div id="l2" class="sub-content">
+    💰 500 сая ₮ хүртэл<br>📈 2.9–3.5%<br>⏳ 1–84 сар
+  </div>
+
+  <button class="sub-btn" onclick="toggle('l3')">📱 Дугаар барьцаалсан зээл</button>
+  <div id="l3" class="sub-content">
+    💰 120 сая ₮ хүртэл<br>📈 2.8–3.1%<br>⏳ 1–6 сар
+  </div>
+
+  <button class="sub-btn" onclick="toggle('l4')">🏢 Үл хөдлөх барьцаалсан зээл</button>
+  <div id="l4" class="sub-content">
+    💰 100 сая ₮ хүртэл<br>📈 3.2–3.5%<br>⏳ 1–24 сар
+  </div>
+
+  <button class="sub-btn" onclick="toggle('l5')">💳 Дижитал зээл</button>
+  <div id="l5" class="sub-content">
+    💰 5 сая ₮ хүртэл<br>📈 3.5%<br>⏳ 30 хоног
+  </div>
+
+  <button class="sub-btn" onclick="toggle('l6')">🎓 Автомашин барьцаалсан зээл</button>
+  <div id="l6" class="sub-content">
+    💰 100 сая ₮ хүртэл<br>📈 3.2–3.5%<br>⏳ 1–24 сар
+  </div>
+
+</div>
+
+<a class="main-btn" href="https://www.mandalcredit.mn/loan-request" target="_blank">
+📝 Онлайн хүсэлт
+</a>
+
+<a class="main-btn" href="https://www.mandalcredit.mn/login" target="_blank">
+🔁 Зээлийн эргэн төлөлт
+</a>
+
+<!-- APP ТАТАХ -->
+<button class="main-btn" onclick="toggle('app')">📲 App татах</button>
+<div id="app" class="section">
+
+  <button class="sub-btn" onclick="toggle('android')">🤖 Android</button>
+  <div id="android" class="sub-content">
+    👉 <a href="https://play.google.com" target="_blank">Play Store татах</a>
+  </div>
+
+  <button class="sub-btn" onclick="toggle('ios')">🍎 iOS</button>
+  <div id="ios" class="sub-content">
+    👉 <a href="https://www.apple.com/app-store/" target="_blank">App Store татах</a>
+  </div>
+
+</div>
+
+<!-- САЛБАР -->
+<button class="main-btn" onclick="toggle('branches')">📍 Салбарын байршил</button>
+<div id="branches" class="section">
+
+  <button class="sub-btn" onclick="toggle('b1')">📍 Төв салбар</button>
+  <div id="b1" class="sub-content">
+    СБД, Мэру Тауэр 301
+  </div>
+
+  <button class="sub-btn" onclick="toggle('b2')">📍 Сонгинохайрхан</button>
+  <div id="b2" class="sub-content">
+    Автоком төв B-228
+  </div>
+
+  <button class="sub-btn" onclick="toggle('b3')">📍 Да Хүрээ</button>
+  <div id="b3" class="sub-content">
+    БЗД, Да хүрээ, 2-р давхар
+  </div>
+
+</div>
+
+<!-- ХОЛБОО -->
+<button class="main-btn" onclick="toggle('contacts')">☎️ Холбоо барих</button>
+<div id="contacts" class="section">
+
+  <button class="sub-btn" onclick="toggle('c1')">📞 Төв салбар</button>
+  <div id="c1" class="sub-content">
+    <a href="tel:+97676001661">7600-1661</a>
+  </div>
+
+  <button class="sub-btn" onclick="toggle('c2')">📞 Сонгинохайрхан</button>
+  <div id="c2" class="sub-content">
+    <a href="tel:+97688641661">8864-1661</a>
+  </div>
+
+  <button class="sub-btn" onclick="toggle('c3')">📞 Да Хүрээ</button>
+  <div id="c3" class="sub-content">
+    <a href="tel:+97680771661">8077-1661</a>
+  </div>
+
+</div>
+
+<a class="main-btn" href="https://www.facebook.com/" target="_blank">
+📘 Facebook
+</a>
+
+</div>
+
+<script>
+function toggle(id){
+  const el=document.getElementById(id);
+  el.style.display=el.style.display==="block"?"none":"block";
+}
+</script>
+
+</body>
+</html>
